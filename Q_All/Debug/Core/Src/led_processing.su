@@ -1,0 +1,2 @@
+led_processing.c:24:6:display7SEG	16	static
+led_processing.c:34:6:debugLED_blinky	8	static
