@@ -64,8 +64,8 @@ all: main-build
 main-build: STM_Midterm.elf secondary-outputs
 
 # Tool invocations
-STM_Midterm.elf: $(OBJS) $(USER_OBJS) E:\OneDrive\FileBK_next\VXL\STM_Midterm\Q_All\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "STM_Midterm.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"E:\OneDrive\FileBK_next\VXL\STM_Midterm\Q_All\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM_Midterm.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+STM_Midterm.elf: $(OBJS) $(USER_OBJS) E:\OneDrive\FileBK_next\VXL\STM_Midterm\STM32\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "STM_Midterm.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"E:\OneDrive\FileBK_next\VXL\STM_Midterm\STM32\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM_Midterm.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
